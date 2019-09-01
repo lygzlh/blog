@@ -1,0 +1,24 @@
+{% extends 'homePage.html' %}
+{% block search %}
+    <div class="content left">
+            {% for row in article %}
+                <div class="content-frame">
+                    <div style="margin-left: 10px">
+                        <a class="title" href="/read/{{ row.id }}.html">{{ row.title }}</a>
+                        <p>{{ row.introduce }}</p>
+                        <div class="content-info">
+                            <a>{{ row.author.username }}</a>
+                            <span>发布于：{{ row.date }}</span>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        <!-- 分页 -->
+        <div class="d-page">
+            <div>
+                {{ a }}
+            </div>
+        </div>
+        </div>
+
+{% endblock %}

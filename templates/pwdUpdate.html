@@ -1,0 +1,16 @@
+{% extends 'userCenter.html' %}
+{% block staticFile %}
+    <script src="/static/js/pwdUpdate.js"></script>
+{% endblock %}
+{% block content %}
+    <div>修改密码</div>
+    <p>
+        <label for="sPwd">原密码：</label>
+        <input type="text" id="sPwd"/>
+    </p>
+    <p>
+        <label for="cPwd">修改密码：</label>
+        <input type="text" id="cPwd"/>
+    </p>
+    <input type="button" value="修改密码" onclick="changePwd();"/>
+{% endblock %}

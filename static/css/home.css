@@ -1,0 +1,131 @@
+body{
+    margin: 0;
+    background: #f5f6f7 !important;
+}
+
+.top{
+    height: 38px;
+    background-color: #fff;
+    width: 100%;
+    position: fixed;
+}
+
+.main-contain{
+    margin: 0 auto;
+    width: 1200px;
+    height: 38px;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+
+.logo{
+    width: 165px;
+    height: 38px;
+}
+
+.top-menu{
+    display: inline-block;
+    width: 65px;
+    padding: 5px;
+    height: 35px;
+    line-height: 38px;
+    margin-left: 3px;
+    text-align: center;
+    color: black;!important;
+}
+
+.ac-menu{
+    display: inline-block;
+    padding: 5px;
+    height: 35px;
+    line-height: 38px;
+    color: black;
+}
+
+.main-body{
+    margin: 0 auto;
+    width: 1200px;
+    min-height: 600px;
+}
+
+.content{
+    width: 840px;
+    display: inline-block;
+    height: 600px;
+    margin-top: 68px;
+}
+.content-frame{
+    border-bottom: 1px dotted #ccc;
+    background-color: white;
+    width: 840px;
+}
+.cate-item{
+    display: inline-block;
+    float: left;
+    margin-left: 5px;
+    margin-top:68px;
+    background-color: white;
+    height: 250px;
+    width:350px;
+
+    z-index: 900;
+}
+
+.search{
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 300px;
+}
+.title{
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.content-info{
+    margin-bottom: 15px;
+}
+#user-info:hover .user-menu{
+
+    display: block;
+}
+.user-menu{
+    margin-left: 40px;
+    margin-top: 4px;
+    background-color: white;
+    border: 1px solid gray;
+    z-index: 999;
+    display: none;
+}
+.user-menu a{
+    display: block;
+    color: black;
+}
+.content-info span{
+    font-size: 12px;
+    margin-left: 15px;
+    color: #555;
+
+}
+.d-page{
+    width: 840px;
+}
+.page{
+    padding: 5px;
+    display: inline-block;
+    margin: 3px;
+    background-color:cornflowerblue;
+    color: white;
+}
+
+.active{
+    background-color:darkorange;
+}
+.seBtn{
+    margin-left: -8px;
+    margin-top: -2px;
+}

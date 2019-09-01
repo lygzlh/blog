@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>写博客</title>
+    <link rel="stylesheet" href="/static/css/bootstrap-select.min.css"/>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/static/css/writeArticle.css"/>
+    <script src="/static/js/jquery-3.3.1.min.js"></script>
+    <script src="/static/js/jquery.cookie.js"></script>
+    <script src="/static/kindeditor/kindeditor-all-min.js"></script>
+    <script src="/static/js/writeArticle.js"></script>
+</head>
+<body>
+<!-- 头部 -->
+    <div class="thead">
+        <div style="margin: 0 auto;width: 1000px;line-height: 50px">
+            <a style="color: white;" href="/">首页</a>
+        </div>
+    </div>
+<!-- 身体 -->
+    <div class="tbody">
+        <div class="c-frame">
+            <div>
+                <p>标题</p>
+                <p><input id="title" class="form-control" type="text"  value="{{ obj.title }}"/></p>
+            </div>
+            <div>
+                <p>分类</p>
+                <p>
+                    python<input type="radio" value="1" name="category"/>
+                    java<input type="radio" value="2" name="category"/>
+                    其他<input type="radio" value="3" name="category"/>
+                </p>
+            </div>
+            <div>
+                <p>简介</p>
+                <p><textarea id="introduce" class="form-control">{{ obj.introduce }}</textarea></p>
+            </div>
+            <div>
+                <p>正文</p>
+                <p><textarea id="editor-id" class="editor">{{ obj.content }}</textarea></p>
+            </div>
+            <div>
+                <input type="button" onclick="articleSub({{ obj.id }});" value="提交"/>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var l = {{ obj.category_id }};
+        $('input[name=category][value='+l+']').attr("checked","checked");
+    </script>
+</body>
+</html>

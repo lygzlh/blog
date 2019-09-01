@@ -1,0 +1,36 @@
+body{
+    margin: 0;
+    background: #f5f6f7 !important;
+}
+.thead{
+    height: 38px;
+    background-color: #283e5c;
+    width: 100%;
+}
+
+.tbody{
+    width:1000px;
+    margin: 0 auto;
+    min-height: 500px;
+    background-color: white;
+    position: relative;
+}
+.pst{
+    position: absolute;
+    top: 30px;
+    width: 100%;
+}
+.main-frame{
+
+}
+.bottom-line{
+    border-bottom: 1px solid gray;
+}
+
+.content{
+    min-height: 200px;
+}
+.discuss{
+    width: 100%;
+    margin-top: 50px;
+}

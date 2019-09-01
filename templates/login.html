@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册</title>
+    <link rel="stylesheet" href="/static/css/login.css"/>
+    <link rel="stylesheet" href="/static/css/bootstrap-select.min.css"/>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css"/>
+    <script src="/static/js/login.js"></script>
+    <script src="/static/js/jquery-3.3.1.min.js"></script>
+    <script src="/static/js/jquery.cookie.js"></script>
+</head>
+<body>
+    <div class="thead">
+        <div style="margin: 0 auto;width: 1000px;line-height: 40px">
+            <a style="color: white;" href="/">首页</a>
+        </div>
+    </div>
+    <!-- 登录框 -->
+    <div class="main-body">
+        <div class="login-frame">
+            <form action="/login.html" method="post">
+                {% csrf_token %}
+                {{ result.as_p }}
+                <p>
+                    <input class="btn btn-danger loginBtn" type="button" onclick="loginSub();" value="登录"/>
+                </p>
+                <p>
+                    <a href="register.html">立即注册</a>
+                </p>
+            </form>
+
+        </div>
+    </div>
+</body>
+</html>

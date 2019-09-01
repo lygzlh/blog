@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>myBlog首页</title>
+    <link rel="stylesheet" href="/static/css/home.css"/>
+    <link rel="stylesheet" href="/static/css/bootstrap-select.min.css"/>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css"/>
+    <script src="/static/js/jquery-3.3.1.min.js"></script>
+    <script src="/static/js/jquery.cookie.js"></script>
+    <script src="/static/js/homePage.js"></script>
+</head>
+<body>
+<!-- 顶部导航 -->
+    <div class="top">
+        <div class="main-contain">
+            <img class="logo left" src="/static/imgs/Logo.jpg">
+            <a class="top-menu left" href="/">首页</a>
+            <a class="top-menu left" href="/home-1-1.html">python</a>
+            <a class="top-menu left" href="/home-1-2.html">java</a>
+            <a class="top-menu left" href="/home-1-3.html">其他</a>
+            {% if res.is_login %}
+                <div class="right"  id="user-info">
+                    <span class="ac-menu">欢迎回来，{{ res.username }}</span>
+                    <div class="user-menu">
+                        <a href="/user-center/user-info.html">个人中心</a>
+                        <a href="/write-article.html">写博客</a>
+                        <a href="/logout">注销</a>
+                    </div>
+                </div>
+            {% else %}
+                <a class="ac-menu right" href="/login.html">登录</a>
+                <span class="ac-menu right">|</span>
+                <a class="ac-menu right" href="/register.html">注册</a>
+            {% endif %}
+
+        </div>
+    </div>
+<!-- 主体 -->
+    <div class="main-body">
+    {% block search %}
+        <div class="content left">
+            {% for row in article %}
+                <div class="content-frame">
+                    <div style="margin-left: 10px">
+                        <a class="title" href="/read/{{ row.id }}.html">{{ row.title }}</a>
+                        <p>{{ row.introduce }}</p>
+                        <div class="content-info">
+                            <a>{{ row.author.username }}</a>
+                            <span>发布于：{{ row.date }}</span>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        <!-- 分页 -->
+        <div class="d-page">
+            <div>
+                {{ a }}
+            </div>
+        </div>
+        </div>
+    {% endblock %}
+        <div class="cate-item">
+            <div class="search">
+                <form method="get" action="/search">
+                    <input type="text" class="form-control" name="text" id="s-text" style="width: 200px;display: inline-block" placeholder="请输入搜索内容"/>
+                    <input type="submit" class="btn btn-primary seBtn" value="搜索"/>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+<div style="height: 300px;margin-top: 300px"></div>
+
+
+</body>
+</html>

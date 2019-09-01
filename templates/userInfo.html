@@ -1,0 +1,22 @@
+{% extends  'userCenter.html'%}
+    {% block content %}
+        <div>个人资料</div>
+        <div class="bottom-line"></div>
+        <div class="user-info">
+            <label>用户名：</label>
+            <input type="text" />
+        </div>
+        <div class="bottom-line"></div>
+        <div class="user-info">
+            发表的文章
+        </div>
+        <div>
+            {% for i in obj %}
+                <p>
+                    <span>{{ i.title }}</span>
+                    <a href="/user-center/del_article-{{ i.id }}.html">删除</a>|
+                    <a href="/write-article-{{ i.id }}.html">编辑</a>
+                </p>
+            {% endfor %}
+        </div>
+    {% endblock %}

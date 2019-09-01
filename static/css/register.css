@@ -1,0 +1,45 @@
+body{
+    margin: 0;
+}
+
+.re-body{
+    width: 800px;
+    margin: 0 auto;
+}
+
+.re-body label{
+    display: inline-block;
+    width: 80px;
+    text-align: left;
+}
+
+.thead{
+    background-color: #283e5c;
+    width: 100%;
+    height: 40px;
+}
+.division{
+    margin-top: 90px;
+    border-bottom:1px solid rgba(0,0,0,.1);
+}
+
+.division span{
+    font-size: 21px;
+}
+.re-frame{
+    margin-top: 50px;
+    width: 415px;
+}
+
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.reBtn{
+    margin-top: 30px;
+    display: inline-block;
+    width: 150px;
+    margin-left: 115px;
+}

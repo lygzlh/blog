@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心</title>
+    <link rel="stylesheet" href="/static/css/bootstrap-select.min.css"/>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/static/css/userCenter.css"/>
+    <script src="/static/js/jquery-3.3.1.min.js"></script>
+    <script src="/static/js/jquery.cookie.js"></script>
+    {% block staticFile %}
+    {% endblock %}
+</head>
+<body>
+<!-- 头部 -->
+    <div class="thead">
+        <div style="line-height:40px">
+            <a style="color: white;" href="/">首页</a>
+        </div>
+    </div>
+<!-- 身体 -->
+    <div class="tbody">
+        <!-- 左侧菜单 -->
+        <div class="t-menu">
+            <ul>
+                <li><a href="/user-center/user-info.html">个人资料</a></li>
+                <li><a>文章管理</a></li>
+                <li><a href="/user-center/update-psw.html">修改密码</a></li>
+            </ul>
+        </div>
+
+        <!-- 右侧内容 -->
+        <div class="contain">
+            {% block  content%}
+                用户中心
+            {% endblock %}
+        </div>
+    </div>
+</body>
+</html>
